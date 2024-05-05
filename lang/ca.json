@@ -1,0 +1,24 @@
+{
+  "welcome": "Benvingut a GPTWordAccelerator",
+  "description": "Aquesta és una aplicació web dissenyada per millorar l'eficiència del disseny de documents de Word amb l'ajuda de tecnologia avançada.",
+  "installation": {
+    "title": "Instal·lació",
+    "description": "Els usuaris rebran un fitxer XML buit amb les etiquetes meta necessàries i altres camps necessaris per a solucions d'arxiu. Per augmentar la transparència i la confiança, es recomana instal·lar AutoHotkey (AHK) de forma independent, i es proporcionarà el codi font necessari perquè els usuaris el peguin en un nou fitxer AHK. S'inclouran instruccions detallades per facilitar aquest procés."
+  },
+  "definitionNeeds": {
+    "title": "Definir les teves necessitats",
+    "description": "Els usuaris definiran les necessitats actuals del document de Word que desitgen automatitzar amb una macro de VBA, detallant les modificacions específiques que necessiten implementar a través de formularis interactius a l'aplicació web."
+  },
+  "searchPreviousMacros": {
+    "title": "Cerca de macros anteriors",
+    "description": "Els usuaris buscaran al seu propi repositori XML, que conté macros de processos de disseny anteriors. Aquesta cerca serà facilitada per un arbre d'etiquetes, i a través d'accions directes de AHK, els usuaris podran enviar nodes d'etiquetes completes directament a ChatGPT per trobar una macro base adequada o iterar en la cerca de subetiquetes i descripcions fins que es trobi la macro més adient."
+  },
+  "macroDevelopment": {
+    "title": "Desenvolupament de macros",
+    "description": "Si es troba una macro adequada, s'enviarà a ChatGPT juntament amb els requisits de l'usuari. A l'aplicació web, un menú desplegable proporcionarà múltiples suggeriments pregravats amb accions directes per optimitzar i accelerar la comunicació amb ChatGPT. El codi generat per ChatGPT s'enviarà automàticament a l'editor de VBA de Word mitjançant una acció directa de AHK. L'usuari actuarà com a tester, proporcionant retroalimentació a ChatGPT sobre errors o confirmació d'operació, en un cicle comunicatiu continu on ChatGPT actua com a programador."
+  },
+  "finalizationArchive": {
+    "title": "Finalització i arxiu",
+    "description": "Després de múltiples iteracions i retroalimentació, una vegada que la macro sigui exitosa, es etiquetarà amb metadades i s'arxivará automàticament en el fitxer XML mitjançant una acció directa de AHK. El èxit de l'emmagatzematge es confirmarà amb un missatge que inclogui l'ID de la macro, assegurant que el procés sigui transparent i eficient."
+  }
+}

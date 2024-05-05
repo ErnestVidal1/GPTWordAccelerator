@@ -1,0 +1,24 @@
+{
+  "welcome": "Bienvenido a GPTWordAccelerator",
+  "description": "Esta es una aplicación web diseñada para mejorar la eficiencia del diseño de documentos de Word con la ayuda de tecnología avanzada.",
+  "installation": {
+    "title": "Instalación",
+    "description": "Los usuarios recibirán un archivo XML vacío con las etiquetas meta requeridas y otros campos necesarios para soluciones de archivo. Para aumentar la transparencia y la confianza, se recomienda instalar AutoHotkey (AHK) de forma independiente, y se proporcionará el código fuente necesario para que los usuarios lo peguen en un nuevo archivo AHK. Se incluirán instrucciones detalladas para facilitar este proceso."
+  },
+  "definitionNeeds": {
+    "title": "Definir tus necesidades",
+    "description": "Los usuarios definirán las necesidades actuales del documento de Word que desean automatizar con una macro de VBA, detallando las modificaciones específicas que necesitan implementar a través de formularios interactivos en la aplicación web."
+  },
+  "searchPreviousMacros": {
+    "title": "Buscar macros anteriores",
+    "description": "Los usuarios buscarán en su propio repositorio XML, que contiene macros de procesos de diseño anteriores. Esta búsqueda será facilitada por un árbol de etiquetas, y a través de accesos directos de AHK, los usuarios podrán enviar nodos de etiquetas completas directamente a ChatGPT para encontrar una macro base apropiada o iterar en la búsqueda de subetiquetas y descripciones hasta que se encuentre la macro más adecuada."
+  },
+  "macroDevelopment": {
+    "title": "Desarrollo de macros",
+    "description": "Si se encuentra una macro adecuada, se enviará a ChatGPT junto con los requisitos del usuario. En la aplicación web, un menú desplegable proporcionará múltiples sugerencias pregrabadas con accesos directos para optimizar y acelerar la comunicación con ChatGPT. El código generado por ChatGPT se enviará automáticamente al editor de VBA de Word mediante un acceso directo de AHK. El usuario actuará como tester, proporcionando retroalimentación a ChatGPT sobre errores o confirmación de operación, en un ciclo comunicativo continuo donde ChatGPT actúa como programador."
+  },
+  "finalizationArchive": {
+    "title": "Finalización y archivo",
+    "description": "Después de múltiples iteraciones y retroalimentación, una vez que la macro sea exitosa, se etiquetará con metadatos y se archivará automáticamente en el archivo XML mediante un acceso directo de AHK. El éxito del almacenamiento se confirmará con un mensaje que incluye el ID de la macro, asegurando que el proceso sea transparente y eficiente."
+  }
+}

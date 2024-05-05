@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPTWordAccelerator</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="UTF-8">
+  <title>GPTWordAccelerator</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Bienvenido a GPTWordAccelerator</h1>
-    <p>Esta es una aplicación web diseñada para mejorar la eficiencia de la maquetación de documentos Word con la ayuda de tecnología avanzada.</p>
+  <header>
+    <h1 id="welcome"></h1>
+    <nav>
+      <!-- Navigation links -->
+      <a href="#" onclick="loadLanguage('en'); return false;">English</a> |
+      <a href="#" onclick="loadLanguage('es'); return false;">Español</a> |
+      <a href="#" onclick="loadLanguage('ca'); return false;">Català</a>
+    </nav>
+  </header>
+  <main>
+    <p id="description"></p>
+    <section id="installation">
+      <h2 id="installation-title"></h2>
+      <p id="installation-description"></p>
+    </section>
+    <section id="definition-needs">
+      <h2 id="definition-needs-title"></h2>
+      <p id="definition-needs-description"></p>
+    </section>
+    <section id="search-previous-macros">
+      <h2 id="search-previous-macros-title"></h2>
+      <p id="search-previous-macros-description"></p>
+    </section>
+    <section id="macro-development">
+      <h2 id="macro-development-title"></h2>
+      <p id="macro-development-description"></p>
+    </section>
+    <section id="finalization-archive">
+      <h2 id="finalization-archive-title"></h2>
+      <p id="finalization-archive-description"></p>
+    </section>
+  </main>
+  <footer>
+    <p id="footer-credits" data-i18n="footer.credits">GPTWordAccelerator © 2024</p>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
