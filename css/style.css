@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.info-section {
+    width: 30%; /* Adjusts the width of each section */
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    background-color: white;
+    margin: 10px;
+	min-height: 210px; /* Establece una altura mínima para cada caja */
+
+}
+
+.info-link {
+    display: inline-block;
+    background-color: #444; /* Ajusta el color de fondo según tu diseño */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 0px;
+    background-color: #333;
+    color: white;
+    position: absolute; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Coloca el footer en el fondo */
+    width: 100%;
+
+}

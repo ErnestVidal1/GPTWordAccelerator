@@ -6,41 +6,33 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1 id="welcome"></h1>
-    <nav>
-      <!-- Navigation links -->
-      <a href="#" onclick="loadLanguage('en'); return false;">English</a> |
-      <a href="#" onclick="loadLanguage('es'); return false;">Español</a> |
-      <a href="#" onclick="loadLanguage('ca'); return false;">Català</a>
-    </nav>
-  </header>
-  <main>
-    <p id="description"></p>
-    <section id="installation">
-      <h2 id="installation-title"></h2>
-      <p id="installation-description"></p>
+	<header class="header">
+		<h1>Welcome to GPTWordAccelerator</h1>
+		<p class="sub-header">Optimizing Document Layouts with AI-Driven Automation</p>
+		<a href="installation.html" class="info-link">Initial Setup & Philosophy</a>
+	</header>
+  <main class="main-container">
+
+    <section id="definition-needs" class="info-section">
+      <h2>Define Needs & Search</h2>
+      <p>Clearly define your document layout automation needs and search your XML macro repository. Use ChatGPT with our filters to find base macros from successful past projects that might serve as a template.</p>
     </section>
-    <section id="definition-needs">
-      <h2 id="definition-needs-title"></h2>
-      <p id="definition-needs-description"></p>
+    
+    <section id="search-previous-macros" class="info-section">
+      <h2>Communicate & Develop</h2>
+      <p>Use our structured prompts to communicate your needs and any existing macro code similar to the current case to ChatGPT. Plan the development, act as a tester, provide feedback on adjustments and errors, and execute the macro in the document when ready.</p>
     </section>
-    <section id="search-previous-macros">
-      <h2 id="search-previous-macros-title"></h2>
-      <p id="search-previous-macros-description"></p>
-    </section>
-    <section id="macro-development">
-      <h2 id="macro-development-title"></h2>
-      <p id="macro-development-description"></p>
-    </section>
-    <section id="finalization-archive">
-      <h2 id="finalization-archive-title"></h2>
-      <p id="finalization-archive-description"></p>
+
+    <section id="macro-development" class="info-section">
+	<h2>Finalize & Archive</h2>
+	<p>With ChatGPT's help, generate an XML structure with metadata, descriptions, tags, and categories for easy future retrieval and archive it efficiently.</p>
     </section>
   </main>
+
   <footer>
-    <p id="footer-credits" data-i18n="footer.credits">GPTWordAccelerator © 2024</p>
+    <p>GPTWordAccelerator © 2024</p>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
