@@ -20,18 +20,19 @@ body, html {
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
     align-items: center;
     flex-grow: 1;
     padding: 20px;
     background-color: #f4f4f4;
     box-sizing: border-box;
     width: 100%;
-    overflow: hidden; /* Evita el scroll en la página */
+    height: 100%; /* Ocupa toda la altura disponible */
+    overflow-y: auto; /* Permite el scroll vertical en el contenedor principal */
 }
 
 .info-section {
-    width: 100%;
+    width: 90%;
     max-width: 600px; /* Asegura un ancho máximo razonable en pantallas grandes */
     padding: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
@@ -83,6 +84,8 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        overflow-y: auto; /* Permite el scroll vertical */
+        overflow-x: hidden; /* Evita el scroll horizontal */
     }
 
     .info-section {
