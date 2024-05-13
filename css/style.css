@@ -2,6 +2,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    height: 100%;
+    overflow: hidden; /* Evita el scroll en la página */
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -9,23 +13,29 @@ body, html {
     color: white;
     padding: 20px;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .main-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     padding: 20px;
     background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 .info-section {
-    width: 30%; /* Adjusts the width of each section */
+    width: 90%; /* Ajusta el ancho de cada sección para dispositivos pequeños */
+    max-width: 300px; /* Establece un ancho máximo para evitar que sea demasiado grande en pantallas grandes */
     padding: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     background-color: white;
     margin: 10px;
-	min-height: 210px; /* Establece una altura mínima para cada caja */
-
+    min-height: 210px; /* Establece una altura mínima para cada caja */
+    text-align: center; /* Centra el texto en dispositivos pequeños */
 }
 
 .info-link {
@@ -41,11 +51,32 @@ body, html {
 
 footer {
     text-align: center;
-    padding: 0px;
+    padding: 10px 0;
     background-color: #333;
     color: white;
-    position: absolute; /* Fija el footer en la parte inferior */
-    bottom: 0; /* Coloca el footer en el fondo */
+    flex-shrink: 0;
     width: 100%;
+}
 
+/* Media Queries */
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .info-section {
+        width: 30%;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-container {
+        height: calc(100vh - 140px); /* Ajusta la altura para pantallas más grandes */
+    }
+    
+    .info-section {
+        padding: 30px;
+    }
 }
