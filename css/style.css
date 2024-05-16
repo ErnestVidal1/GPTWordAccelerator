@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -43,76 +49,55 @@ footer {
 
 .main-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
     flex-grow: 1;
     padding: 20px;
     background-color: #f4f4f4;
-    box-sizing: border-box;
     width: 100%;
-    height: calc(100vh - 120px); /* Calcula la altura restando header y footer */
-    overflow: hidden; /* Evita el scroll en la página */
+    height: calc(100vh - 120px);
+    overflow: hidden;
 }
 
 .info-section {
-    width: 90%;
-    max-width: 600px;
+    flex: 1; /* Cada caja ocupa una proporción igual del contenedor principal */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
     padding: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     background-color: white;
     margin: 10px;
     min-height: 210px;
     text-align: center;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    flex-grow: 1;
-    overflow-y: auto; /* Añade scroll vertical cuando sea necesario */
+    overflow-y: auto;
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
-    .main-container {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: stretch; /* Ajusta los elementos al inicio para evitar el desbordamiento */
-        flex-wrap: nowrap; /* Permite que los elementos se envuelvan si es necesario */
-    }
-
-    .info-section {
-        flex: 1;
-        margin: 10px;
-    }
-}
-
 @media (max-width: 767px) {
     .main-container {
-        flex-direction: column;
+        flex-direction: column !important; /* Apila las cajas verticalmente */
         justify-content: flex-start;
         align-items: center;
-        overflow-y: auto;
-        overflow-x: hidden;
+        height: auto !important; /* Permite que el contenedor crezca según el contenido */
+        overflow-y: auto; /* Permite el scroll vertical */
+        overflow-x: hidden; /* Evita el scroll horizontal */
     }
 
     .info-section {
-        width: 90%;
-        max-width: none;
-        margin: 10px 0;
+        width: 90% !important; /* Ajusta el ancho de las cajas en móviles */
+        max-width: none !important;
+        margin: 10px 0 !important;
+        height: auto !important; /* Permite que las cajas crezcan según el contenido */
+        min-height: 200px !important; /* Establece una altura mínima para las cajas */
     }
 }
 
-/* Ajuste adicional para dispositivos móviles */
-@media (max-width: 767px) and (orientation: portrait) {
-    .main-container {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
 
-    .info-section {
-        width: 100%;
-        max-width: none;
-        margin: 10px 0;
-    }
+
+
+
 }
+
