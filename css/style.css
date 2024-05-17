@@ -1,17 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
-    overflow: hidden; /* Evita el scroll en la página */
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Evita el scroll horizontal */
 }
 
 header {
@@ -25,8 +19,8 @@ header {
 
 header .info-link {
     display: inline-block;
-    background-color: #444; /* Ajusta el color de fondo */
-    color: white; /* Color del texto */
+    background-color: #444;
+    color: white;
     padding: 10px 20px;
     margin-top: 10px;
     border-radius: 5px;
@@ -35,7 +29,7 @@ header .info-link {
 }
 
 header .info-link:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse */
+    background-color: #555;
 }
 
 footer {
@@ -45,59 +39,39 @@ footer {
     color: white;
     flex-shrink: 0;
     width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 .main-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center; /* Centra las cajas */
     align-items: stretch;
     flex-grow: 1;
-    padding: 20px;
+    padding: 20px; /* Ajustar padding general */
     background-color: #f4f4f4;
-    width: 100%;
+    width: calc(100% - 40px); /* Reduce el ancho total para dejar margen a los lados */
     height: calc(100vh - 120px);
-    overflow: hidden;
+    margin: auto; /* Centra el contenedor principal */
+    overflow: auto; /* Permite el scroll vertical */
 }
 
 .info-section {
-    flex: 1; /* Cada caja ocupa una proporción igual del contenedor principal */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-direction: column;
+    flex: 1;
+    max-width: 33%; /* Ajusta el ancho para evitar desbordamiento */
     padding: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
     background-color: white;
     margin: 10px;
     min-height: 210px;
-    text-align: center;
+    text-align: left; /* Alinea el texto a la izquierda */
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     overflow-y: auto;
 }
 
-/* Media Queries */
-@media (max-width: 767px) {
-    .main-container {
-        flex-direction: column !important; /* Apila las cajas verticalmente */
-        justify-content: flex-start;
-        align-items: center;
-        height: auto !important; /* Permite que el contenedor crezca según el contenido */
-        overflow-y: auto; /* Permite el scroll vertical */
-        overflow-x: hidden; /* Evita el scroll horizontal */
-    }
-
-    .info-section {
-        width: 90% !important; /* Ajusta el ancho de las cajas en móviles */
-        max-width: none !important;
-        margin: 10px 0 !important;
-        height: auto !important; /* Permite que las cajas crezcan según el contenido */
-        min-height: 200px !important; /* Establece una altura mínima para las cajas */
-    }
+.info-section h2 {
+    text-align: center; /* Mantiene los encabezados centrados */
 }
-
-
-
-
-
-}
-
