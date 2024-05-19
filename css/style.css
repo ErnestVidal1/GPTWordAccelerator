@@ -11,18 +11,41 @@ body, html {
 header {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px; /* Reducir padding superior e inferior */
     text-align: center;
     flex-shrink: 0;
     width: 100%;
+    position: relative;
+}
+
+.header-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centrar verticalmente */
+    left: 20px;
+    width: 50px;  /* Ajusta el tamaño del icono */
+    height: 50px; /* Ajusta el tamaño del icono */
+}
+
+header h1 {
+    margin: 0;
+    padding: 5px 0; /* Reducir padding superior e inferior */
+    line-height: 1.2; /* Ajustar line-height */
+}
+
+header .sub-header {
+    margin: 0;
+    padding: 2px 0; /* Reducir padding superior e inferior */
+    line-height: 1.2; /* Ajustar line-height */
 }
 
 header .info-link {
     display: inline-block;
     background-color: #444;
     color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 5px 10px; /* Reducir padding */
+    margin-top: 5px; /* Reducir margin */
+    margin-bottom: 20px; /* Añadir margen inferior */
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -34,13 +57,32 @@ header .info-link:hover {
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 20px; /* Reducir padding superior e inferior */
     background-color: #333;
     color: white;
     flex-shrink: 0;
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+#footer-first-paragraph {
+    margin-top: 20px; /* Añadir margen superior */
+}
+
+footer p {
+    margin: 0;
+    padding: 2px 0; /* Reducir padding superior e inferior */
+    line-height: 1.2; /* Ajustar line-height */
+}
+
+footer a {
+    color: #1E90FF; /* Azul más brillante para los enlaces */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .main-container {
@@ -52,9 +94,10 @@ footer {
     padding: 20px; /* Ajustar padding general */
     background-color: #f4f4f4;
     width: calc(100% - 40px); /* Reduce el ancho total para dejar margen a los lados */
-    height: calc(100vh - 120px);
+    height: calc(100vh - 70px); /* Ajustar altura para más espacio en las cajas */
     margin: auto; /* Centra el contenedor principal */
-    overflow: auto; /* Permite el scroll vertical */
+    overflow-y: auto; /* Permite el scroll vertical */
+    position: relative;
 }
 
 .info-section {
@@ -70,8 +113,65 @@ footer {
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow-y: auto;
+    position: relative; /* Añadido para posicionamiento absoluto de los hijos */
+    border-top: 5px solid #2B579A; /* Azul corporativo de Word */
 }
 
 .info-section h2 {
     text-align: center; /* Mantiene los encabezados centrados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px; /* Alinea en la parte inferior de la caja */
+    width: calc(100% - 40px); /* Ajusta el ancho para evitar scroll horizontal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-indicator {
+    font-size: 12px;
+    color: #333;
+}
+
+.next, .prev {
+    font-size: 12px;
+    color: #1E90FF;
+    cursor: pointer;
+}
+
+.next:hover, .prev:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-content {
+  display: block;
+}
+
+button img {
+  margin-right: 8px;
 }
