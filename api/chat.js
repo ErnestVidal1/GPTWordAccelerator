@@ -1,6 +1,6 @@
 const axios = require('axios');
 require('dotenv').config(); // Asegúrate de que las variables de entorno estén cargadas
-
+//Forzar nuevo deployment
 async function handleChatRequest(req, res) {
     const userMessage = req.body.message;
     if (!userMessage || typeof userMessage !== 'string' || userMessage.trim() === '') {
